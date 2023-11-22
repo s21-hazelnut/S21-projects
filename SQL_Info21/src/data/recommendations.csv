@@ -1,0 +1,7 @@
+﻿id,peer,recommendedpeer
+1,hazelnut,ninetale
+2,barberry,hazelnut
+3,hazelnut,barberry
+4,barberry,ninetale
+5,ninetale,barberry
+6,ninetale,hazelnut

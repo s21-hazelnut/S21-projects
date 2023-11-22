@@ -1,0 +1,7 @@
+id,Checkedpeer,checkingpeer,pointamount
+1,ninetale,hazelnut,3
+2,ninetale,barberry,4
+3,hazelnut,barberry,2
+4,hazelnut,ninetale,3
+5,barberry,ninetale,1
+6,barberry,hazelnut,3
