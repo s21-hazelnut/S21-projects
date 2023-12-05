@@ -1,3 +1,4 @@
+SET search_path = "schema_s21";
 CREATE OR REPLACE VIEW customers_transactions_summ AS
 SELECT pi.customer_id, AVG(t.transaction_summ) AS Customer_Average_Check
 FROM transactions t

@@ -1,3 +1,4 @@
+SET search_path = "schema_s21";
 CREATE MATERIALIZED VIEW mv_purchase_history AS
 SELECT pi.customer_id        AS Customer_ID,
        t.transaction_id      AS Transaction_ID,

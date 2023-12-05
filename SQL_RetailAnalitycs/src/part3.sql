@@ -1,3 +1,4 @@
+SET search_path = "schema_s21";
 DO
 $CREATE_roles$
     DECLARE

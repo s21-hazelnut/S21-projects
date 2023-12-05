@@ -1,3 +1,4 @@
+SET search_path = "schema_s21";
 CREATE OR REPLACE FUNCTION part5(first_date timestamp, last_date timestamp, added_number_of_transactions int DEFAULT 1,
                                  max_churn_index numeric DEFAULT 0.1, max_discount_share numeric DEFAULT 0.1, allowable_margin numeric DEFAULT 0.1)
     RETURNS TABLE

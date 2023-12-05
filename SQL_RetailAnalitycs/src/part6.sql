@@ -1,3 +1,4 @@
+SET search_path = "schema_s21";
 CREATE OR REPLACE FUNCTION dist_groups(number_of_groups int, maximum_churn_index numeric,
                                        maximum_consumption_stability_index numeric)
     RETURNS TABLE

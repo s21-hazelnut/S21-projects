@@ -1,3 +1,4 @@
+SET search_path = "schema_s21";
 DROP FUNCTION IF EXISTS fnc_average_count(int) CASCADE;
 CREATE FUNCTION fnc_average_count(transactions_num int)
     RETURNS table

@@ -1,3 +1,4 @@
+SET search_path = "schema_s21";
 CREATE MATERIALIZED VIEW mv_Periods AS
 SELECT pi.customer_id              AS                       Customer_ID,
        pg.group_id                 AS                       Group_ID,

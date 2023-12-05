@@ -1,3 +1,4 @@
+SET search_path = "schema_s21";
 CREATE MATERIALIZED VIEW Stability AS
 SELECT pi.customer_id,
        pg.group_id,

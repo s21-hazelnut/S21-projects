@@ -1,4 +1,5 @@
-CREATE ROLE role_s21 SUPERUSER CREATEDB CREATEROLE;
+DROP SCHEMA IF EXISTS schema_s21 CASCADE;
+-- CREATE ROLE role_s21 SUPERUSER CREATEDB CREATEROLE;
 
 CREATE SCHEMA IF NOT EXISTS schema_s21 AUTHORIZATION role_s21;
 SET search_path = "schema_s21";
@@ -99,15 +100,15 @@ BEGIN
 END;
 $$;
 
-CALL import('personal_information', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/data/Personal_Data.tsv');
-CALL import('cards', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/data/Cards.tsv');
-CALL import('sku_group', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/data/Groups_SKU.tsv');
-CALL import('product_grid', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/data/SKU.tsv');
-CALL import('stores', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/data/Stores.tsv');
-CALL import('transactions', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/data/Transactions.tsv');
-CALL import('checks', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/data/Checks.tsv');
+CALL import('personal_information', '/tmp/data2/Personal_Data.tsv');
+CALL import('cards', '/tmp/data2/Cards.tsv');
+CALL import('sku_group', '/tmp/data2/Groups_SKU.tsv');
+CALL import('product_grid', '/tmp/data2/SKU.tsv');
+CALL import('stores', '/tmp/data2/Stores.tsv');
+CALL import('transactions', '/tmp/data2/Transactions.tsv');
+CALL import('checks', '/tmp/data2/Checks.tsv');
 CALL import('date_of_analysis_formation',
-            '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/data/Date_Of_Analysis_Formation.tsv');
+            '/tmp/data2/Date_Of_Analysis_Formation.tsv');
 
 
 
@@ -123,13 +124,13 @@ BEGIN
 END;
 $$;
 
-CALL export('personal_information',
-            '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Personal_information.csv');
-CALL export('cards', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Cards.csv');
-CALL export('product_grid', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Product_grid.csv');
-CALL export('sku_group', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_SKU_group.csv');
-CALL export('stores', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Stores.csv');
-CALL export('transactions', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Transactions.csv');
-CALL export('checks', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Checks.csv');
-CALL export('date_of_analysis_formation',
-            '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Date_of_analysis_formation.csv');
+-- CALL export('personal_information',
+--             '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Personal_information.csv');
+-- CALL export('cards', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Cards.csv');
+-- CALL export('product_grid', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Product_grid.csv');
+-- CALL export('sku_group', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_SKU_group.csv');
+-- CALL export('stores', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Stores.csv');
+-- CALL export('transactions', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Transactions.csv');
+-- CALL export('checks', '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Checks.csv');
+-- CALL export('date_of_analysis_formation',
+--             '/Users/hazelnut/SQL3_RetailAnalitycs_v1.0-1/src/export/EXP_Date_of_analysis_formation.csv');
