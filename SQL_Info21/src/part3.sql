@@ -1,3 +1,4 @@
+SET search_path = "schema_s21";
  -- 1) Написать функцию, возвращающую таблицу TransferredPoints в более человекочитаемом виде
 
 CREATE OR REPLACE FUNCTION fnc_transferred_points()

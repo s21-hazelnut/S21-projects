@@ -1,8 +1,9 @@
-CREATE DATABASE info_s21;
+-- CREATE DATABASE info_s21;
 
 -- Переключись на базу "info_s21"
+DROP SCHEMA IF EXISTS schema_s21 CASCADE;
 
-CREATE ROLE role_s21 WITH LOGIN CREATEDB CREATEROLE;
+-- CREATE ROLE role_s21 WITH LOGIN CREATEDB CREATEROLE;
 
 CREATE SCHEMA IF NOT EXISTS schema_s21 AUTHORIZATION role_s21;
 SET search_path = "schema_s21";
@@ -110,16 +111,16 @@ BEGIN
 END;
 $$;
 
-CALL import('tasks', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/data/tasks.csv');
-CALL import('peers', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/data/peers.csv');
-CALL import('checks', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/data/checks.csv');
-CALL import('friends', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/data/friends.csv');
-CALL import('p2p', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/data/p2p.csv');
-CALL import('timetracking', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/data/timetracking.csv');
-CALL import('recommendations', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/data/recommendations.csv');
-CALL import('xp', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/data/XP.csv');
-CALL import('verter', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/data/verter.csv');
-CALL import('transferredpoints', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/data/transferredpoints.csv');
+CALL import('tasks', '/tmp/data1/Tasks.csv');
+CALL import('peers', '/tmp/data1/peers.csv');
+CALL import('checks', '/tmp/data1/checks.csv');
+CALL import('friends', '/tmp/data1/friends.csv');
+CALL import('p2p', '/tmp/data1/p2p.csv');
+CALL import('timetracking', '/tmp/data1/TimeTracking.csv');
+CALL import('recommendations', '/tmp/data1/recommendations.csv');
+CALL import('xp', '/tmp/data1/XP.csv');
+CALL import('verter', '/tmp/data1/Verter.csv');
+CALL import('transferredpoints', '/tmp/data1/TransferredPoints.csv');
 
 
 CREATE OR REPLACE PROCEDURE export(
@@ -134,13 +135,13 @@ BEGIN
 END;
 $$;
 
-CALL export('tasks', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/tasks1.csv');
-CALL export('peers', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/peers1.csv');
-CALL export('checks', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/checks1.csv');
-CALL export('friends', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/friends1.csv');
-CALL export('p2p', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/p2p1.csv');
-CALL export('timetracking', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/timetracking1.csv');
-CALL export('recommendations', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/recommendations1.csv');
-CALL export('xp', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/XP1.csv');
-CALL export('verter', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/verter1.csv');
-CALL export('transferredpoints', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/transferredpoints1.csv');
+-- CALL export('tasks', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/tasks1.csv');
+-- CALL export('peers', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/peers1.csv');
+-- CALL export('checks', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/checks1.csv');
+-- CALL export('friends', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/friends1.csv');
+-- CALL export('p2p', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/p2p1.csv');
+-- CALL export('timetracking', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/timetracking1.csv');
+-- CALL export('recommendations', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/recommendations1.csv');
+-- CALL export('xp', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/XP1.csv');
+-- CALL export('verter', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/verter1.csv');
+-- CALL export('transferredpoints', '/Users/hazelnut/SQL2_Info21_v1.0-0/SRC/export/transferredpoints1.csv');
