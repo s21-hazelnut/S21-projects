@@ -28,6 +28,11 @@
      <height>0</height>
     </size>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>Сумма кредита, руб.</string>
    </property>
@@ -70,6 +75,11 @@
      <height>0</height>
     </size>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>Срок кредита, мес.</string>
    </property>
@@ -102,6 +112,11 @@
      <height>0</height>
     </size>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>Процентная ставка годовая, %</string>
    </property>
@@ -120,7 +135,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>13</pointsize>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="text">
@@ -138,7 +153,7 @@
    </property>
    <property name="font">
     <font>
-     <pointsize>13</pointsize>
+     <pointsize>10</pointsize>
     </font>
    </property>
    <property name="text">
@@ -159,6 +174,11 @@
      <width>1</width>
      <height>0</height>
     </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Общая выплата, руб.</string>
@@ -182,6 +202,11 @@
      <height>0</height>
     </size>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>Макс. ежемесячный платеж, руб.</string>
    </property>
@@ -203,6 +228,11 @@
      <width>1</width>
      <height>0</height>
     </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Переплата, руб.</string>
@@ -306,6 +336,11 @@
      <width>220</width>
      <height>40</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Выполнить расчет</string>

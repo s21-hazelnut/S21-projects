@@ -19,7 +19,7 @@ install: dist
 	cp -rf calc.pro *.h *.cpp *.ui ../build
 	cd ../build; qmake calc.pro
 	make -C ../build
-	cp -rf ../build/calc.app  $(HOME)/Desktop
+	# cp -rf ../build/calc.app  $(HOME)/Desktop
 
 uninstall:
 	@rm -rf $(HOME)/Desktop/calc.app
